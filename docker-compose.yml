@@ -1,0 +1,28 @@
+version: "3.9"
+
+networks:
+  custom_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.25.0.0/16
+
+services:
+  ubuntu-cockpit:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ubuntu-cockpit
+    privileged: true
+    restart: unless-stopped
+    hostname: server-os              # Static hostname
+    networks:
+      custom_net:
+        ipv4_address: 172.25.0.10    # Static IP
+    ports:
+      - "9091:9090"   # Cockpit
+      - "8080:80"     # Apache
+    tty: true
+    stdin_open: true
+    command: ["/sbin/init"]
+    mem_limit: 2048m                 # Cap RAM at 2 GB
