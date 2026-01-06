@@ -6,8 +6,6 @@ This project sets up a lightweight server environment using **Docker** and **Doc
 ## Features
 - Ubuntu 22.04 base image
 - Cockpit web UI (port 9091)
-- Apache HTTP server (port 8080)
-- PostgreSQL (optional, port 5432)
 - Static IP `172.25.0.10` and hostname `server-os`
 - RAM capped at 2 GB
 
