@@ -1,5 +1,5 @@
 
-# Server Instance (Ubuntu + Cockpit + Apache + PostgreSQL)
+# Server Instance (Ubuntu + Cockpit}
 
 This project sets up a lightweight server environment using **Docker** and **Docker Compose**.
 
