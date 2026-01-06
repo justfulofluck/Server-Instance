@@ -27,5 +27,3 @@ docker compose up --build -d
 ## Notes
 - Networking (IP/hostname) defined in `docker-compose.yml`
 - Resource limits set via `mem_limit: 2048m`
-- For production, run Cockpit, Apache, and PostgreSQL in separate containers
-```
